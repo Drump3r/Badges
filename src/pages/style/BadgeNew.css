@@ -6,3 +6,6 @@
     margin-bottom: 1rem;
     color: #ffffff;
   }
+  .btn.btn-primary {
+      margin-top: 1rem;
+  }
