@@ -1,14 +1,8 @@
 import React from 'react'
 
 class BadgeForm extends React.Component {
-    state = {}
     handleClick= e => {
         console.log('Button was clicked')
-    }
-    handleChangue = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
     }
     render() {
         return (
@@ -18,41 +12,41 @@ class BadgeForm extends React.Component {
                     <div className="form-group">
                         <label>First Name</label>
                         <input 
-                            onChange={this.handleChangue} 
+                            onChange={this.props.onChange} 
                             className="form-control" 
                             type="text"
                             name="firstName" 
-                            value={this.state.firstName}
+                            value={this.props.formValue.firstName}
                         />
                     </div>
                     <div className="form-group">
                         <label>Last Name</label>
                         <input 
-                            onChange={this.handleChangue} 
+                            onChange={this.props.onChange} 
                             className="form-control" 
                             type="text" 
                             name="lastName"
-                            value={this.state.lastName}
+                            value={this.props.formValue.lastName}
                         />
                     </div>
                     <div className="form-group">
                         <label>Degree</label>
                         <input 
-                            onChange={this.handleChangue} 
+                            onChange={this.props.onChange} 
                             className="form-control" 
                             type="text" 
                             name="degree"
-                            value={this.state.degree}
+                            value={this.props.formValue.degree}
                         />
                     </div>
                     <div className="form-group">
                         <label>Twitter</label>
                         <input 
-                            onChange={this.handleChangue} 
+                            onChange={this.props.onChange} 
                             className="form-control" 
                             type="text" 
                             name="twitter"
-                            value={this.state.twitter}
+                            value={this.props.formValue.twitter}
                         />
                     </div>
 
