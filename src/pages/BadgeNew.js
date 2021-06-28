@@ -2,7 +2,6 @@ import React from 'react'
 
 import './style/BadgeNew.css'
 import header from '../images/badge-header.svg'
-import Navbar from '../components/Navbar'
 import Badge from '../components/Badge'
 import BadgeForm from '../components/BadgeForm'
 
@@ -16,14 +15,15 @@ class BadgeNew extends React.Component {
         avatar:'https://cdn.costumewall.com/wp-content/uploads/2017/06/charlie-brown.jpg'} }
     handleChangue = e => {
         this.setState({
-          ...this.state.form,
-          [e.target.name]: e.target.value
+            form: {
+                ...this.state.form,
+                [e.target.name]: e.target.value
+            }
         })
     }
     render() {
         return (
             <div>
-                <Navbar />
                 <div className="BadgeNew__hero">
                     <img className="img-fluid" src={header} alt="Logo"/>
                 </div>
